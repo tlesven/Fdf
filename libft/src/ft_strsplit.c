@@ -6,7 +6,7 @@
 /*   By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/22 19:28:34 by tlesven           #+#    #+#             */
-/*   Updated: 2014/04/16 12:49:42 by tlesven          ###   ########.fr       */
+/*   Updated: 2015/03/11 11:12:49 by tlesven          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ char				**ft_strsplit(char const *s, char c)
 		s = s + ft_tilnxtsplit(s, c);
 		i++;
 	}
-	tab[i] = '\0';
+	tab[i] = NULL;
 	return (tab);
 }

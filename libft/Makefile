@@ -6,11 +6,11 @@
 #    By: tlesven <tlesven@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 10:12:21 by tlesven           #+#    #+#              #
-#    Updated: 2015/02/02 19:40:32 by tlesven          ###   ########.fr        #
+#    Updated: 2015/03/11 11:11:34 by tlesven          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=gcc
+CC=cc
 CFLAGS= -Wall -Werror -Wextra -c -I includes/
 AR=ar
 RAN=ranlib
@@ -88,13 +88,13 @@ $(NAME): $(FILEOBJ)
 	
 
 $(FILEOBJ): $(FILESRC)
-	@mkdir obj/
 	@$(CC) $(CFLAGS) $(FILESRC)
+	@mkdir obj
 	@mv $(OBJ) $(PATHOBJ)
 	@echo "objects done"
 
 clean:
-	@$(RM) $(PATHOBJ)
+	@$(RM) obj
 	@echo "objects deleted"
 
 fclean: clean
